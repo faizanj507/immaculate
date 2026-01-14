@@ -13,7 +13,7 @@ export const Heading: React.FC<HeadingProps> = ({
   className = '', 
   color = 'black' 
 }) => {
-  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+  const Tag = `h${level}` as keyof React.JSX.IntrinsicElements;
   
   const sizeStyles = {
     1: 'text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1]',
