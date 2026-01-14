@@ -35,7 +35,7 @@ export const WhyUs: React.FC = () => {
           </Text>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-left mb-16">
           {benefits.map((benefit, index) => (
             <div key={index} className="bg-white p-8 border border-gray-100 flex flex-col h-full">
               <Text weight="bold" className="text-secondary text-4xl font-serif mb-4">“</Text>
@@ -44,6 +44,15 @@ export const WhyUs: React.FC = () => {
               </Text>
             </div>
           ))}
+        </div>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <a href="tel:4105490727">
+            <Button variant="primary" className="!px-12 !py-5 shadow-lg">Call Now</Button>
+          </a>
+          <a href="#contact">
+            <Button variant="outline" className="!px-12 !py-5">Request a Quote</Button>
+          </a>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heading } from '../atoms/Heading';
 import { Text } from '../atoms/Text';
+import { Button } from '../atoms/Button';
 
 export const ProfessionalCleaning: React.FC = () => {
   const steps = [
@@ -30,7 +31,7 @@ export const ProfessionalCleaning: React.FC = () => {
           </Text>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {steps.map((step, index) => (
             <div key={index} className="bg-gray-50 p-10 flex flex-col items-center text-center border border-gray-100 transition-all duration-300">
               <Text weight="semibold" className="text-sm leading-relaxed text-text-main">
@@ -40,7 +41,16 @@ export const ProfessionalCleaning: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-20 text-center">
+        <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
+          <a href="tel:4105490727">
+            <Button variant="primary" className="!px-12 !py-5 shadow-lg">Call Now</Button>
+          </a>
+          <a href="#contact">
+            <Button variant="outline" className="!px-12 !py-5">Request a Quote</Button>
+          </a>
+        </div>
+
+        <div className="text-center">
           <Text variant="large" weight="bold" className="text-secondary opacity-60">
             We protect your time, your home, and your peace of mind.
           </Text>

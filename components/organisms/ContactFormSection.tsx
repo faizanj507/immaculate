@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Heading } from '../atoms/Heading';
 import { Text } from '../atoms/Text';
@@ -8,6 +8,13 @@ import { Select } from '../atoms/Select';
 import { FormField } from '../molecules/FormField';
 
 export const ContactFormSection: React.FC = () => {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
   return (
     <section id="contact" className="py-24 bg-white relative">
       <div className="container mx-auto px-6 md:px-12">
@@ -33,33 +40,49 @@ export const ContactFormSection: React.FC = () => {
 
           <div className="lg:col-span-7">
             <div className="max-w-xl mx-auto lg:ml-auto">
-              <form className="space-y-8 bg-gray-50 p-10 rounded-2xl border border-gray-100">
-                <div className="grid grid-cols-1 gap-8">
-                   <FormField label="Name">
-                     <Input placeholder="Your Name" className="!bg-white" />
-                   </FormField>
-                   <FormField label="Email">
-                     <Input type="email" placeholder="name@email.com" className="!bg-white" />
-                   </FormField>
-                   <FormField label="Phone">
-                     <Input type="tel" placeholder="(000) 000-0000" className="!bg-white" />
-                   </FormField>
-                   <FormField label="Service">
-                     <Select 
-                       className="!bg-white"
-                       options={[
-                         { label: 'Select a Service', value: '' },
-                         { label: 'Recurring Cleaning', value: 'recurring' },
-                         { label: 'Deep Cleaning', value: 'deep' },
-                         { label: 'Move In/Out', value: 'move' },
-                       ]} 
-                     />
-                   </FormField>
+              {submitted ? (
+                <div className="bg-gray-50 p-12 rounded-2xl border border-gray-100 text-center animate-in fade-in zoom-in duration-500">
+                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-8">
+                    <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <Heading level={3} className="mb-4">Thank You!</Heading>
+                  <Text variant="body" color="gray" className="mb-8">
+                    Your request has been received. One of our team members will contact you shortly with your free quote.
+                  </Text>
+                  <Button variant="outline" onClick={() => setSubmitted(false)}>Send Another Message</Button>
                 </div>
-                <Button variant="primary" fullWidth className="!py-6 !text-base shadow-lg shadow-primary/20">
-                  Submit
-                </Button>
-              </form>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-8 bg-gray-50 p-10 rounded-2xl border border-gray-100">
+                  <div className="grid grid-cols-1 gap-8">
+                     <FormField label="Name">
+                       <Input required placeholder="Your Name" className="!bg-white" />
+                     </FormField>
+                     <FormField label="Email">
+                       <Input required type="email" placeholder="name@email.com" className="!bg-white" />
+                     </FormField>
+                     <FormField label="Phone">
+                       <Input required type="tel" placeholder="(410) 000-0000" className="!bg-white" />
+                     </FormField>
+                     <FormField label="Service">
+                       <Select 
+                         required
+                         className="!bg-white"
+                         options={[
+                           { label: 'Select a Service', value: '' },
+                           { label: 'Recurring Cleaning', value: 'recurring' },
+                           { label: 'Deep Cleaning', value: 'deep' },
+                           { label: 'Move In/Out', value: 'move' },
+                         ]} 
+                       />
+                     </FormField>
+                  </div>
+                  <Button type="submit" variant="primary" fullWidth className="!py-6 !text-base shadow-lg shadow-primary/20">
+                    Submit Request
+                  </Button>
+                </form>
+              )}
             </div>
           </div>
         </div>

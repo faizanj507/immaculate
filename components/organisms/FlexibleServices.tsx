@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heading } from '../atoms/Heading';
 import { Text } from '../atoms/Text';
+import { Button } from '../atoms/Button';
 
 export const FlexibleServices: React.FC = () => {
   const services = [
@@ -27,7 +28,7 @@ export const FlexibleServices: React.FC = () => {
           </Heading>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <div key={index} className="flex flex-col gap-6 p-10 bg-white/5 border-t-4 border-primary">
               <Heading level={4} color="white" className="text-xl leading-relaxed !font-bold">
@@ -38,6 +39,15 @@ export const FlexibleServices: React.FC = () => {
               </Text>
             </div>
           ))}
+        </div>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <a href="tel:4105490727">
+            <Button variant="white" className="!px-12 !py-5 shadow-xl">Call Now</Button>
+          </a>
+          <a href="#contact">
+            <Button variant="primary" className="!px-12 !py-5 shadow-xl">Request a Quote</Button>
+          </a>
         </div>
       </div>
     </section>
