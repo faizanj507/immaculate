@@ -4,10 +4,10 @@ import { Text } from '../atoms/Text';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#0A0E1A] py-12 px-6 md:px-12 text-white">
+    <footer className="bg-[#0A0E1A] py-8 sm:py-10 md:py-12 px-4 sm:px-6 md:px-12 text-white">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 border-b border-white/10 pb-12 mb-12">
-          <div className="relative w-[180px] h-[45px] brightness-0 invert">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8 border-b border-white/10 pb-8 sm:pb-10 md:pb-12 mb-8 sm:mb-10 md:mb-12">
+          <div className="relative w-[160px] h-[40px] sm:w-[180px] sm:h-[45px] brightness-0 invert">
             <Image 
               src="https://immaculateclean.com/wp-content/uploads/Immaculate_Clean_Logo_Final_1.png" 
               alt="Immaculate Clean Logo" 
@@ -16,13 +16,13 @@ export const Footer: React.FC = () => {
             />
           </div>
           
-          <nav className="flex flex-wrap justify-center gap-8">
-            <a href="#contact" className="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Contact Us</a>
-            <a href="tel:4105490727" className="text-sm font-bold tracking-widest uppercase hover:text-primary transition-colors">(410) 549-0727</a>
-            <a href="mailto:customerservice@immaculateclean.com" className="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">customerservice@immaculateclean.com</a>
+          <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 text-center">
+            <a href="#contact" className="text-xs sm:text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2">Contact Us</a>
+            <a href="tel:4105490727" className="text-xs sm:text-sm font-bold tracking-widest uppercase hover:text-primary transition-colors py-2">(410) 549-0727</a>
+            <a href="mailto:customerservice@immaculateclean.com" className="text-xs sm:text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 break-all">customerservice@immaculateclean.com</a>
           </nav>
 
-          <div className="flex gap-6">
+          <div className="flex gap-4 sm:gap-6">
             <a href="https://www.facebook.com/ImmaculateCleanInc" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors" title="Facebook">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" /></svg>
             </a>
@@ -41,13 +41,13 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <Text variant="xs" color="white" className="opacity-40 uppercase tracking-widest font-bold">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center">
+          <Text variant="xs" color="white" className="opacity-40 uppercase tracking-widest font-bold text-[10px] sm:text-xs">
             Copyright © 2026 Immaculate Clean Inc.
           </Text>
-          <div className="flex gap-8">
-            <a href="#" className="text-[10px] uppercase font-black tracking-widest text-white/40 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-[10px] uppercase font-black tracking-widest text-white/40 hover:text-white transition-colors">Terms of Service</a>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
+            <a href="#" className="text-[10px] sm:text-xs uppercase font-black tracking-widest text-white/40 hover:text-white transition-colors py-2">Privacy Policy</a>
+            <a href="#" className="text-[10px] sm:text-xs uppercase font-black tracking-widest text-white/40 hover:text-white transition-colors py-2">Terms of Service</a>
           </div>
         </div>
       </div>

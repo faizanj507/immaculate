@@ -44,34 +44,34 @@ export const WhyUs: React.FC = () => {
   ];
 
   return (
-    <section id="why-us" className="py-24 bg-white overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <Heading level={2} className="mb-6">
+    <section id="why-us" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
+        <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-12 md:mb-16">
+          <Heading level={2} className="mb-4 sm:mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             Why More <span className="text-primary">Maryland Families</span> Choose Us for Home <span className="text-primary">Cleaning Services</span>
           </Heading>
-          <Text variant="body" className="mb-6">
+          <Text variant="body" className="mb-4 sm:mb-6 text-sm sm:text-base">
             We know you have many options when it comes to hiring a home cleaning company. That's why we go above and beyond with every clean. Since 2004, we've built a reputation for reliable, high-quality, and honest service for households across Eldersburg, Ellicott City, Owings Mills, Westminster, Sykesville, and surrounding Central Maryland communities.
           </Text>
-          <Text variant="large" weight="bold">
+          <Text variant="large" weight="bold" className="text-base sm:text-lg md:text-xl">
             With Immaculate Clean, you'll enjoy:
           </Text>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12 md:mb-16">
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-white p-8 border border-gray-100 rounded-lg group hover:bg-gray-50 transition-colors duration-300">
+            <div key={index} className="bg-white p-6 sm:p-8 border border-gray-100 rounded-lg group hover:bg-gray-50 transition-colors duration-300">
               <div className="flex flex-col">
-                <div className="mb-6">
-                  <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                <div className="mb-4 sm:mb-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     {benefit.icon}
                   </div>
                 </div>
                 <div>
-                  <Heading level={4} className="mb-3 !font-bold">
+                  <Heading level={4} className="mb-2 sm:mb-3 !font-bold text-lg sm:text-xl">
                     {benefit.title}
                   </Heading>
-                  <Text variant="body" color="gray" className="leading-relaxed">
+                  <Text variant="body" color="gray" className="leading-relaxed text-sm sm:text-base">
                     {benefit.description}
                   </Text>
                 </div>
@@ -80,12 +80,12 @@ export const WhyUs: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <a href="tel:4105490727">
-            <Button variant="primary" className="!px-12 !py-5 shadow-lg">Call Now</Button>
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+          <a href="tel:4105490727" className="w-full sm:w-auto">
+            <Button variant="primary" className="w-full sm:w-auto !px-8 sm:!px-12 !py-4 sm:!py-5 shadow-lg">Call Now</Button>
           </a>
-          <a href="#contact">
-            <Button variant="secondary" className="!px-12 !py-5">Request a Quote</Button>
+          <a href="#contact" className="w-full sm:w-auto">
+            <Button variant="secondary" className="w-full sm:w-auto !px-8 sm:!px-12 !py-4 sm:!py-5">Request a Quote</Button>
           </a>
         </div>
       </div>

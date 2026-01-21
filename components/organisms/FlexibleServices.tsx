@@ -20,18 +20,18 @@ export const FlexibleServices: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-[#0F4C81] text-white relative overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="text-center max-w-4xl mx-auto mb-20">
-          <Heading level={2} color="white" className="mb-8">
+    <section id="services" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#0F4C81] text-white relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12 relative z-10">
+        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 md:mb-20">
+          <Heading level={2} color="white" className="mb-6 sm:mb-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             Flexible Residential <span className="text-primary italic">Cleaning Services</span> Built Around Your Life
           </Heading>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {services.map((service, index) => (
-            <div key={index} className="flex flex-col gap-6 p-10 bg-white/5 border-t-4 border-primary">
-              <Heading level={4} color="white" className="text-xl leading-relaxed !font-bold">
+            <div key={index} className="flex flex-col gap-4 sm:gap-6 p-6 sm:p-8 md:p-10 bg-white/5 border-t-4 border-primary">
+              <Heading level={4} color="white" className="text-lg sm:text-xl leading-relaxed !font-bold">
                 {service.title}
               </Heading>
               <Text color="white" className="text-sm leading-relaxed opacity-90">
@@ -41,12 +41,12 @@ export const FlexibleServices: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <a href="tel:4105490727">
-            <Button variant="white" className="!px-12 !py-5 shadow-xl">Call Now</Button>
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+          <a href="tel:4105490727" className="w-full sm:w-auto">
+            <Button variant="white" className="w-full sm:w-auto !px-8 sm:!px-12 !py-4 sm:!py-5 shadow-xl">Call Now</Button>
           </a>
-          <a href="#contact">
-            <Button variant="primary" className="!px-12 !py-5 shadow-xl">Request a Quote</Button>
+          <a href="#contact" className="w-full sm:w-auto">
+            <Button variant="primary" className="w-full sm:w-auto !px-8 sm:!px-12 !py-4 sm:!py-5 shadow-xl">Request a Quote</Button>
           </a>
         </div>
       </div>

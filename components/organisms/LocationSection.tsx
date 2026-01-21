@@ -2,7 +2,7 @@ import React from 'react';
 
 export const LocationSection: React.FC = () => {
   return (
-    <section className="h-[400px] bg-white">
+    <section className="h-[300px] sm:h-[350px] md:h-[400px] bg-white">
       <a 
         href="https://www.google.com/maps/place/Immaculate+Clean+Inc./data=!4m2!3m1!1s0x0:0xb8749a6f1dae535c?sa=X&ved=1t:2428&ictx=111" 
         target="_blank" 
