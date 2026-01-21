@@ -5,7 +5,7 @@ import { Button } from '../atoms/Button';
 
 export const CTASection: React.FC = () => {
   return (
-    <section className="py-24 bg-white text-center border-t border-gray-100">
+    <section className="py-24  text-center bg-gray-50">
       <div className="container mx-auto px-6 md:px-12 max-w-4xl">
         <Heading level={2} className="mb-10">
           Speak directly with a friendly team member who can answer questions and help book your <span className="text-primary italic">first clean.</span>
@@ -13,7 +13,7 @@ export const CTASection: React.FC = () => {
         
         <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
           <a href="tel:4105490727">
-            <Button variant="outline" className="!px-12 !py-5 shadow-xl">Call Now</Button>
+            <Button variant="secondary" className="!px-12 !py-5 shadow-xl">Call Now</Button>
           </a>
         </div>
 

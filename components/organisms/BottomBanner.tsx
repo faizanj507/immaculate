@@ -25,7 +25,7 @@ export const BottomBanner: React.FC = () => {
 
         <div className="flex flex-col sm:flex-row justify-center gap-6">
           <a href="tel:4105490727">
-            <Button variant="outline" className="!px-12 !py-5 !border-black !text-black hover:!bg-black hover:!text-white transition-colors shadow-xl">Call Now</Button>
+            <Button variant="secondary" className="!px-12 !py-5 shadow-xl">Call Now</Button>
           </a>
           <a href="#contact">
             <Button variant="primary" className="!px-12 !py-5 !bg-black !text-white !border-black hover:!bg-gray-900 shadow-xl">Request a Quote</Button>

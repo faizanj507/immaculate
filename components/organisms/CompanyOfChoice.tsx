@@ -80,7 +80,7 @@ export const CompanyOfChoice: React.FC = () => {
                 <Button variant="primary" className="!px-12">Call Now</Button>
               </a>
               <a href="#contact">
-                <Button variant="outline" className="!px-12">Request a Quote</Button>
+                <Button variant="secondary" className="!px-12">Request a Quote</Button>
               </a>
             </div>
           </div>

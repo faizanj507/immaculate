@@ -5,42 +5,106 @@ import { Button } from '../atoms/Button';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[85vh] flex flex-col justify-center pt-28 bg-white overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="z-10 order-2 lg:order-1">
-          <Heading level={1} className="mb-8 text-balance">
+    <section className="relative min-h-screen flex bg-gray-50 overflow-hidden">
+      {/* Split Layout: Content Left, Image Right */}
+      <div className="w-full lg:w-1/2 flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-20 py-20 lg:py-0">
+        {/* Logo */}
+        <div className="mb-12 lg:mb-16">
+          <a href="/" className="inline-block">
+            <div className="relative w-[200px] h-[50px] md:w-[240px] md:h-[60px]">
+              <Image 
+                src="https://immaculateclean.com/wp-content/uploads/Immaculate_Clean_Logo_Final_1.png" 
+                alt="Immaculate Clean Logo" 
+                fill 
+                className="object-contain object-left"
+                priority
+              />
+            </div>
+          </a>
+        </div>
+
+        {/* Main Content */}
+        <div className="max-w-xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-main mb-6 text-balance leading-tight">
             Trusted Home Cleaning Service for Maryland Homes
-          </Heading>
+          </h1>
           
-          <div className="flex items-center gap-2 mb-10">
-            <span className="text-xl font-black text-text-main">850+</span>
-            <span className="text-sm uppercase tracking-widest text-text-muted font-bold">5 Star Reviews on Google.</span>
+          {/* Google Reviews Badge */}
+          <div className="flex items-center gap-3 mb-8 p-4 bg-white rounded-lg border border-gray-200 shadow-sm w-fit">
+            <div className="flex items-center gap-2">
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+              <div className="flex items-center gap-1">
+                <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-text-main">850+</span>
+              <span className="text-xs text-text-muted">Google Reviews</span>
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <p className="text-lg text-text-muted mb-10 leading-relaxed font-normal">
+            Reliable, high-quality, and honest cleaning service for Maryland homes since 2004.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4">
             <a href="tel:4105490727">
-              <Button variant="primary" className="!px-12 !py-5 shadow-lg">Call Now</Button>
+              <Button variant="primary" className="!px-10 !py-5 text-base">
+                Call Now
+              </Button>
             </a>
             <a href="#contact">
-              <Button variant="outline" className="!px-12 !py-5">Request a Quote</Button>
+              <Button variant="secondary" className="!px-10 !py-5 text-base">
+                Request a Quote
+              </Button>
             </a>
           </div>
         </div>
+      </div>
 
-        <div className="relative order-1 lg:order-2 h-[400px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
+      {/* Hero Image - Right Side */}
+      <div className="hidden lg:block w-1/2 relative">
+        <div className="absolute inset-0">
           <Image 
-            src="https://immaculateclean.com/wp-content/uploads/IMC-Fallback.webp"
-            alt="Immaculate Clean Home"
+            src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop"
+            alt="Clean, modern home interior - professional cleaning service"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
         </div>
       </div>
-      
-      {/* Decorative element */}
-      <div className="absolute top-0 right-0 -z-10 w-1/3 h-full bg-gray-50/50 skew-x-[-12deg] translate-x-1/2" />
+
+      {/* Mobile Image - Below Content */}
+      <div className="lg:hidden w-full h-[400px] relative mt-8">
+        <Image 
+          src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop"
+          alt="Clean, modern home interior - professional cleaning service"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
     </section>
   );
 };
+

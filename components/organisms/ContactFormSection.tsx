@@ -53,7 +53,7 @@ export const ContactFormSection: React.FC = () => {
                   <Text variant="body" color="gray" className="mb-8">
                     Your request has been received. One of our team members will contact you shortly with your free quote.
                   </Text>
-                  <Button variant="outline" onClick={() => setSubmitted(false)}>Send Another Message</Button>
+                  <Button variant="secondary" onClick={() => setSubmitted(false)}>Send Another Message</Button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-8 bg-gray-50 p-10 rounded-2xl border border-gray-100">
