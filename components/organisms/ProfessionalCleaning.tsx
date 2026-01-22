@@ -34,7 +34,10 @@ export const ProfessionalCleaning: React.FC = () => {
         <div className="max-w-4xl mx-auto mb-12 sm:mb-16 md:mb-20">
           <div className="space-y-4 sm:space-y-6">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-center gap-4 sm:gap-6 p-4 sm:p-6 border-l-4 border-primary bg-gray-50/50 hover:bg-gray-50 transition-colors duration-300">
+              <div key={index} className="rounded-lg flex items-center gap-4 sm:gap-6 p-4 sm:p-6 relative bg-gray-50/50 hover:bg-gray-50 transition-colors duration-300">
+                <div className='absolute left-0 top-[10%] w-1 h-[80%] bg-primary rounded-full'>
+                  
+                </div>
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">
                   {index + 1}
                 </div>

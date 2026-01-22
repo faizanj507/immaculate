@@ -30,7 +30,8 @@ export const FlexibleServices: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {services.map((service, index) => (
-            <div key={index} className="flex flex-col gap-4 sm:gap-6 p-6 sm:p-8 md:p-10 bg-white/5 border-t-4 border-primary">
+            <div key={index} className="flex flex-col gap-4 sm:gap-6 p-6 sm:p-8 md:p-10 bg-white/5 border-primary rounded-lg relative">
+              <div className="absolute top-2 left-[2.5%] w-[95%] h-1 bg-primary rounded-full"></div>
               <Heading level={4} color="white" className="text-lg sm:text-xl leading-relaxed !font-bold">
                 {service.title}
               </Heading>
