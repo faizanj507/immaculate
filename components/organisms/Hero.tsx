@@ -85,9 +85,10 @@ export const Hero: React.FC = () => {
       <div className="hidden lg:block w-1/2 relative">
         <div className="absolute inset-0">
           <Image 
-            src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop"
+            src="/Kassie-Smiles-While-Cleaning-A-B.webp"
             alt="Clean, modern home interior - professional cleaning service"
             fill
+            unoptimized
             className="object-cover"
             priority
           />
@@ -97,9 +98,10 @@ export const Hero: React.FC = () => {
       {/* Mobile Image - Below Content */}
       <div className="lg:hidden w-full h-[300px] sm:h-[400px] relative -mx-4 sm:mx-0 mt-8">
         <Image 
-          src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop"
+          src="/Kassie-Smiles-While-Cleaning-A-B.webp"
           alt="Clean, modern home interior - professional cleaning service"
           fill
+          unoptimized
           className="object-cover"
           priority
         />
